@@ -80,7 +80,6 @@ app.get("/success", (req, res) => {
       console.log(error.response);
       throw error;
     } else {
-      console.log("get payment response");
       console.log(JSON.stringify(payment));
       res.send("success!");
     }
