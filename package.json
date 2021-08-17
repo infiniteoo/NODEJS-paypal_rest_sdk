@@ -1,0 +1,28 @@
+{
+  "name": "paypal_rest_sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infiniteoo/NODEJS-paypal_rest_sdk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infiniteoo/NODEJS-paypal_rest_sdk/issues"
+  },
+  "homepage": "https://github.com/infiniteoo/NODEJS-paypal_rest_sdk#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "paypal-rest-sdk": "^1.8.1"
+  }
+}
