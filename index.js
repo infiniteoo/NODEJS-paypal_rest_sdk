@@ -46,6 +46,16 @@ app.post("/pay", (req, res) => {
       },
     ],
   };
+
+  paypal.payment.create(create_payment_json, (err, payment) => {
+    if (err) {
+      throw error;
+    } else {
+      console.log("create payment response");
+      console.log(payment);
+      res.send("test");
+    }
+  });
 });
 
 app.listen(3000, () => console.log("Listening on port 3000"));
