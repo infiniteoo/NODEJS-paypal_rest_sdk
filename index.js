@@ -60,4 +60,33 @@ app.post("/pay", (req, res) => {
   });
 });
 
+app.get("/success", (req, res) => {
+  const payerId = req.query.PayerID;
+  const paymentId = req.query.paymentId;
+  const execute_payment_json = {
+    payer_id: payerId,
+    transactions: [
+      {
+        amount: {
+          currency: "USD",
+          total: "25.00",
+        },
+      },
+    ],
+  };
+
+  paypal.payment.execute(paymentId, execute_payment_json, (err, payment) => {
+    if (err) {
+      console.log(error.response);
+      throw error;
+    } else {
+      console.log("get payment response");
+      console.log(JSON.stringify(payment));
+      res.send("success!");
+    }
+  });
+});
+
+
+
 app.listen(3000, () => console.log("Listening on port 3000"));
