@@ -87,6 +87,9 @@ app.get("/success", (req, res) => {
   });
 });
 
-
+// create cancel get route
+app.get("/cancel", (req, res) => {
+  res.send("cancelled");
+});
 
 app.listen(3000, () => console.log("Listening on port 3000"));
